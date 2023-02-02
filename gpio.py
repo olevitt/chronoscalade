@@ -4,7 +4,7 @@ import time
 def hello():
     exit()
 def init(start,stop):
-
+    exit()
     # Utiliser les numéros de broche physiques
     GPIO.setmode(GPIO.BOARD)
 
