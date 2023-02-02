@@ -25,7 +25,7 @@ def reset_timer():
     stop_timer()
 def ready():
     reset_timer()
-    label_timer.config(text="Ready ...")
+    label_timer.config(text="Ready")
 def update_timer():
     if start_time:
         majAffichage()
