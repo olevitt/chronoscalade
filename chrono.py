@@ -24,7 +24,6 @@ def reset_timer():
     start_time = None
     stop_timer()
 def ready():
-    stop_timer()
     label_timer.config(text="Ready ...")
 def update_timer():
     if start_time:
