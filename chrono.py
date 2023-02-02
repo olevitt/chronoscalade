@@ -46,6 +46,6 @@ button_quit.pack(expand=True, fill='both')
 
 if gpio:
     from gpio import init
-    init(start_timer,stop_timer)
+    init(ready,start_timer,stop_timer)
 
 root.mainloop()
