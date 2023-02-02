@@ -1,6 +1,6 @@
 import tkinter as tk
 from datetime import datetime
-import RPi.GPIO as GPIO
+from gpio import init
 
 
 def start_timer():
@@ -46,5 +46,6 @@ button_reset.pack(expand=True, fill='both')
 button_quit = tk.Button(root, text="Quitter", command=quit)
 button_quit.pack(expand=True, fill='both')
 
+init(start_timer,stop_timer)
 
 root.mainloop()
