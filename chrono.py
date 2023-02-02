@@ -1,5 +1,6 @@
 import tkinter as tk
 from datetime import datetime
+from gpio import init
 
 def start_timer():
     global start_time
@@ -23,6 +24,7 @@ def update_timer():
 def quit():
     root.destroy()
 
+
 root = tk.Tk()
 root.title("Chronomètre")
 root.geometry("800x480")
@@ -42,5 +44,7 @@ button_reset.pack(expand=True, fill='both')
 
 button_quit = tk.Button(root, text="Quitter", command=quit)
 button_quit.pack(expand=True, fill='both')
+
+init(start_timer,stop_timer)
 
 root.mainloop()
