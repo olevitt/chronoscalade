@@ -17,6 +17,7 @@ def reset_timer():
     label_timer.config(text="dodo")
 def ready():
     label_timer.config(text="Ready ...")
+    stop_timer()
 
 def update_timer():
     if start_time:
