@@ -1,10 +1,11 @@
 import RPi.GPIO as GPIO
 import time
 
-def hello():
-    exit()
 def init(start,stop):
-    # Utiliser les numéros de broche physiques
+    def event_start(event):
+        start()
+    def event_stop(event):
+        stop()
     GPIO.setmode(GPIO.BOARD)
 
     # Bleu
@@ -16,7 +17,6 @@ def init(start,stop):
     # Blanc
     GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-    GPIO.add_event_detect(12, GPIO.RISING, callback=start, bouncetime=300)
-    GPIO.add_event_detect(15, GPIO.RISING, callback=stop, bouncetime=300)
-    GPIO.add_event_detect(16, GPIO.RISING, callback=hello, bouncetime=300)
+    GPIO.add_event_detect(12, GPIO.RISING, callback=event_start, bouncetime=300)
+    GPIO.add_event_detect(15, GPIO.RISING, callback=event_stop, bouncetime=300)
 
