@@ -62,4 +62,7 @@ GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.add_event_detect(12, GPIO.RISING, callback=start_timer, bouncetime=300)
 GPIO.add_event_detect(15, GPIO.RISING, callback=stop_timer, bouncetime=300)
 
+while True:
+    pass
+
 root.mainloop()
