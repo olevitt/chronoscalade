@@ -6,7 +6,7 @@ GPIO_STOP=15
 
 def init(start,stop):
     def event_start(event):
-        if GPIO.input(GPIO_START) == False:
+        if GPIO.input(GPIO_START) == True:
             start()
     def event_stop(event):
         stop()
