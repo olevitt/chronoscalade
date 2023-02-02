@@ -23,6 +23,6 @@ def init(ready,start,stop):
     # Blanc
     GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-    GPIO.add_event_detect(GPIO_START, GPIO.RISING, callback=event_start, bouncetime=300)
+    GPIO.add_event_detect(GPIO_START, GPIO.RISING, callback=event_start)
     GPIO.add_event_detect(GPIO_STOP, GPIO.RISING, callback=event_stop, bouncetime=300)
 
