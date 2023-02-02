@@ -2,7 +2,9 @@ import tkinter as tk
 from datetime import datetime
 from gpio import init
 
+
 def start_timer():
+    exit()
     global start_time
     start_time = datetime.now()
     update_timer()
