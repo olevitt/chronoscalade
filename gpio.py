@@ -4,10 +4,12 @@ import time
 GPIO_START=12
 GPIO_STOP=15
 
-def init(start,stop):
+def init(ready,start,stop):
     def event_start(event):
         if GPIO.input(GPIO_START) == True:
             start()
+        else:
+            ready()
     def event_stop(event):
         stop()
     GPIO.setmode(GPIO.BOARD)

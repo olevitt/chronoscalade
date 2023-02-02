@@ -14,6 +14,8 @@ def stop_timer():
 
 def reset_timer():
     stop_timer()
+    label_timer.config(text="dodo")
+def ready():
     label_timer.config(text="Ready ...")
 
 def update_timer():
@@ -27,7 +29,7 @@ root.title("Chronomètre")
 root.geometry("800x480")
 root.attributes("-fullscreen", True)
 
-label_timer = tk.Label(root, text="Ready ...", font=("Helvetica", 100))
+label_timer = tk.Label(root, text="dodo", font=("Helvetica", 100))
 label_timer.pack(expand=True, fill='both')
 
 button_start = tk.Button(root, text="Démarrer", command=start_timer)
