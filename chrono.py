@@ -31,7 +31,7 @@ def update_timer():
         majAffichage()
         label_timer.after(10, update_timer)
 def majAffichage(fin=False):
-    affichageStr = "Bienvenue :)"
+    affichageStr = "..."
     global start_time
     global stop_time
     if start_time:
@@ -49,11 +49,11 @@ def strdelta(elapsed_time):
     return returnStr
 
 root = Tk()
-root.title("Chronomètre")
+root.title("Chronoscalade")
 root.geometry("800x480")
 root.attributes("-fullscreen", True)
 
-label_timer = Label(root, text="dodo", font=("Helvetica", 200))
+label_timer = Label(root, text="...", font=("Helvetica", 200))
 label_timer.pack(expand=True, fill='both')
 
 button_start = Button(root, text="Démarrer", command=start_timer)
